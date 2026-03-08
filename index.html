@@ -134,8 +134,12 @@
     }
     .btn-primary:hover { background: var(--gold-dark); }
     .btn-secondary {
-      border: 1px solid var(--line);
-      background: #fff;
+      border: 1px solid #d8c7a7;
+      background: #fffaf1;
+      color: var(--deep);
+    }
+    .btn-secondary:hover {
+      background: #f6ecd9;
     }
 
     .hero {
@@ -147,7 +151,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(17,24,39,0.72), rgba(17,24,39,0.45));
+      background: linear-gradient(135deg, rgba(17,24,39,0.38), rgba(17,24,39,0.18));
       pointer-events: none;
     }
     .hero > .container {
@@ -168,10 +172,8 @@
     }
     .hero-card {
       padding: 42px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.92), rgba(250,248,244,0.90)),
-        linear-gradient(120deg, rgba(182,139,58,0.12), transparent 60%);
-      backdrop-filter: blur(4px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.97), rgba(250,248,244,0.96));
+      backdrop-filter: blur(3px);
     }
     .eyebrow {
       color: var(--gold-dark);
@@ -206,8 +208,8 @@
       padding: 20px;
     }
     .stat {
-      background: linear-gradient(180deg, #fff 0%, #fcfaf7 100%);
-      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fffdf9 0%, #f8f1e5 100%);
+      border: 1px solid #e7d7bb;
       border-radius: 18px;
       padding: 22px;
       min-height: 140px;
@@ -248,8 +250,8 @@
       gap: 18px;
     }
     .card {
-      background: var(--paper);
-      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff 0%, #fcf8f1 100%);
+      border: 1px solid #e7d7bb;
       border-radius: var(--radius);
       padding: 26px;
       box-shadow: var(--shadow);
@@ -360,14 +362,15 @@
 
     footer {
       padding: 28px 0 48px;
-      color: var(--muted);
+      color: #d1d5db;
+      background: #111827;
     }
     .footer-grid {
       display: flex;
       justify-content: space-between;
       gap: 18px;
       flex-wrap: wrap;
-      border-top: 1px solid var(--line);
+      border-top: 1px solid rgba(255,255,255,0.12);
       padding-top: 20px;
     }
 
@@ -430,12 +433,12 @@
     <section class="hero" id="home" style="background-image:url('cover.jpg');background-size:cover;background-position:center;">
       <div class="container hero-grid">
         <div class="hero-card">
-          <div class="eyebrow" style="color:#f3d9a0;">Trusted Legal Counsel</div>
-          <h1 style="color:#ffffff; text-shadow:0 8px 24px rgba(0,0,0,0.28);">Trusted legal counsel since 1929.</h1>
-          <p class="lead" style="color:rgba(255,255,255,0.92); text-shadow:0 4px 18px rgba(0,0,0,0.22);">
+          <div class="eyebrow">Trusted Legal Counsel</div>
+          <h1>Trusted legal counsel since 1929.</h1>
+          <p class="lead">
             AFSAAD Law Offices is a law firm based in Hamra, Beirut, Lebanon, advising clients on Lebanese and international law, commercial matters, real estate, contracts, dispute resolution, and cross-border legal issues.
           </p>
-          <p style="margin:0 0 10px;color:rgba(255,255,255,0.92); text-shadow:0 4px 18px rgba(0,0,0,0.22);"><strong>Office Address:</strong><br/>
+          <p style="margin:0 0 10px;color:#4b5563;"><strong>Office Address:</strong><br/>
             58 Amine Mneimne Street<br/>
             Tabet Building, 2nd Floor<br/>
             Hamra, Beirut, Lebanon<br/>
@@ -571,7 +574,7 @@
 
     <section class="section">
       <div class="container">
-        <div class="cta">
+        <div class="cta" style="background:linear-gradient(135deg, #1f2937, #2b3545);">
           <div class="eyebrow" style="color:#e7c98a;">Professional Representation</div>
           <h2 style="color:#fff;">Need a professional online presence for your law office?</h2>
           <p>

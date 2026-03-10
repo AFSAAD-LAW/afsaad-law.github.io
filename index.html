@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AFSAAD Law Offices | Lawyers in Beirut</title>
-<meta name="description" content="AFSAAD Law Offices in  Beirut providing corporate, real estate, contract and litigation legal services in Lebanon and internationally.">
+<meta name="description" content="AFSAAD Law Offices in Hamra Beirut providing corporate, real estate, contract and litigation legal services in Lebanon and internationally.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +37,10 @@ width:min(var(--max),calc(100% - 40px));
 margin:auto;
 }
 
+header .container{
+width:calc(100% - 40px);
+}
+
 h1,h2,h3{
 font-family:'Playfair Display',serif;
 margin:0 0 14px;
@@ -50,18 +54,42 @@ h3{font-size:22px}
 /* HEADER */
 
 header{
-background:white;
-border-bottom:1px solid #e5e7eb;
+background:rgba(255,255,255,0.78);
+border:1px solid rgba(255,255,255,0.55);
 position:sticky;
-top:0;
+top:12px;
 z-index:100;
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-radius:24px;
+box-shadow:0 14px 32px rgba(17,24,39,0.10);
+margin:0 auto;
+width:min(var(--max),calc(100% - 24px));
 }
 
 .nav{
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:28px 0;
+padding:46px 0;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.brand-text strong{
+font-size:30px;
+font-weight:700;
+letter-spacing:0.4px;
+}
+
+.brand-text small{
+font-size:11px;
+letter-spacing:2.2px;
+}
 }
 
 .brand{
@@ -72,7 +100,7 @@ gap:18px;
 
 /* BIGGER LOGO */
 .logo img{
-height:140px;
+height:200px;
 width:auto;
 display:block;
 }
@@ -97,6 +125,13 @@ font-weight:700;
 }
 
 nav ul{
+list-style:none;
+display:flex;
+gap:26px;
+margin:0;
+padding:0;
+align-items:center;
+font-size:15px;
 list-style:none;
 display:flex;
 gap:22px;
@@ -280,9 +315,16 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 
 @media(max-width:900px){
 
+header{
+top:8px;
+width:calc(100% - 16px);
+border-radius:18px;
+}
+
+
 .nav{flex-direction:column;align-items:flex-start}
 
-.logo img{height:100px}
+.logo img{height:140px}
 
 .about-grid,.contact-grid{grid-template-columns:1fr}
 
@@ -325,7 +367,7 @@ h1{font-size:40px}
 <section class="hero">
 <div class="container hero-content">
 <h1>Modern legal counsel with a legacy of trust</h1>
-<p>AFSAAD Law Offices in  Beirut provides Lebanese and international legal services including corporate law, real estate law, contracts, dispute resolution and legal advisory.</p>
+<p>AFSAAD Law Offices in Hamra Beirut provides Lebanese and international legal services including corporate law, real estate law, contracts, dispute resolution and legal advisory.</p>
 
 <div class="hero-buttons">
 <a class="btn btn-primary" href="#contact">Contact the Office</a>

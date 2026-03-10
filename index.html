@@ -1,935 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AFSAAD Law Offices | Lawyers in Beirut</title>
-  <meta name="description" content="AFSAAD Law Offices in Hamra, Beirut. Lebanese and international legal services in corporate law, real estate, contracts, litigation, ADR, inheritance matters, and company formation." />
-  <meta name="keywords" content="lawyer Beirut, law office Hamra, Lebanon lawyer, corporate law Lebanon, real estate lawyer Beirut, AFSAAD Law Offices, company formation Lebanon" />
-  <meta property="og:title" content="AFSAAD Law Offices" />
-  <meta property="og:description" content="Modern legal counsel with a legacy of trust since 1929 in Hamra, Beirut." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="cover.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f7f3ec;
-      --bg-2: #efe7db;
-      --paper: rgba(255,255,255,0.78);
-      --paper-strong: rgba(255,255,255,0.9);
-      --text: #131a24;
-      --muted: #5e6878;
-      --gold: #b7945a;
-      --gold-2: #d5bc8f;
-      --gold-3: #8d6a33;
-      --line: rgba(183,148,90,0.18);
-      --deep: #0d1522;
-      --deep-2: #141e2d;
-      --shadow: 0 24px 60px rgba(14, 21, 34, 0.12);
-      --shadow-soft: 0 16px 36px rgba(14, 21, 34, 0.08);
-      --radius: 26px;
-      --radius-sm: 18px;
-      --max: 1220px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFSAAD Law Offices | Lawyers in Beirut</title>
+<meta name="description" content="AFSAAD Law Offices in  Beirut providing corporate, real estate, contract and litigation legal services in Lebanon and internationally.">
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--text);
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(183,148,90,0.12), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(183,148,90,0.08), transparent 25%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-      line-height: 1.65;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
-    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+<style>
 
-    .topbar {
-      background: rgba(13, 21, 34, 0.96);
-      color: #eef2f7;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      font-size: 13px;
-    }
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 10px 0;
-      flex-wrap: wrap;
-    }
-    .topbar a { color: #eef2f7; }
+:root{
+--gold:#b7945a;
+--dark:#111827;
+--text:#1f2937;
+--bg:#f6f3ee;
+--card:#ffffff;
+--radius:22px;
+--max:1200px;
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(18px);
-      background: rgba(249,245,239,0.76);
-      border-bottom: 1px solid rgba(183,148,90,0.12);
-    }
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 26px;
-      padding: 26px 0;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      min-width: 0;
-    }
+*{box-sizing:border-box}
 
-    .brand-separator {
-      width: 1px;
-      height: 46px;
-      background: linear-gradient(180deg, transparent, var(--gold), transparent);
-      opacity: 0.6;
-    }
-    }
-    .logo {
-      width: auto;
-      height: 78px;
-      flex: 0 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: none;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-    }
-    .logo img {
-      height: 110px;
-      width: auto;
-      object-fit: contain;
-      display: block;
-    }
-    }
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      image-rendering: -webkit-optimize-contrast;
-      filter: contrast(1.08) saturate(1.05);
-    }
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .brand-text strong {
-      font-family: 'Playfair Display', serif;
-      font-size: 34px;
-      line-height: 1.05;
-      letter-spacing: 0.6px;
-      color: #0d1522;
-      font-weight: 700;
-    }
-    .brand-text small {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      color: var(--gold-3);
-      font-weight: 800;
-      opacity: 0.95;
-    }
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+color:var(--text);
+background:var(--bg);
+line-height:1.6;
+}
 
-    nav ul {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      flex-wrap: wrap;
-    }
-    nav a {
-      position: relative;
-      color: var(--deep);
-      font-size: 14px;
-      font-weight: 600;
-      transition: color .25s ease;
-    }
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      transform: scaleX(0);
-      transform-origin: center;
-      transition: transform .28s ease;
-    }
-    nav a:hover { color: var(--gold-3); }
-    nav a:hover::after { transform: scaleX(1); }
+.container{
+width:min(var(--max),calc(100% - 40px));
+margin:auto;
+}
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border-radius: 999px;
-      padding: 14px 22px;
-      font-weight: 700;
-      transition: .28s ease;
-    }
-    .btn-primary {
-      color: white;
-      background: linear-gradient(135deg, #bf9a5e, #9f7a3d);
-      box-shadow: 0 14px 32px rgba(183,148,90,0.28);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 36px rgba(183,148,90,0.34);
-    }
-    .btn-secondary {
-      background: rgba(255,255,255,0.82);
-      border: 1px solid rgba(183,148,90,0.22);
-      color: var(--deep);
-      box-shadow: 0 10px 24px rgba(14, 21, 34, 0.04);
-    }
-    .btn-secondary:hover {
-      transform: translateY(-2px);
-      background: rgba(255,255,255,0.96);
-      box-shadow: 0 14px 28px rgba(14, 21, 34, 0.08);
-    }
+h1,h2,h3{
+font-family:'Playfair Display',serif;
+margin:0 0 14px;
+color:var(--dark);
+}
 
-    .hero {
-      position: relative;
-      padding: 84px 0 62px;
-      background-image: url('cover.jpg');
-      background-size: cover;
-      background-position: center;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(120deg, rgba(13,21,34,0.42), rgba(13,21,34,0.12)),
-        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0;
-      height: 160px;
-      background: linear-gradient(180deg, rgba(247,243,236,0), rgba(247,243,236,1));
-      pointer-events: none;
-    }
-    .hero > .container { position: relative; z-index: 1; }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-      gap: 30px;
-      align-items: stretch;
-    }
-    .glass, .panel {
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-    .hero-card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(251,247,240,0.84));
-      border-radius: 32px;
-      padding: 58px;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 16px;
-      color: var(--gold-3);
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-    }
-    h1, h2, h3 {
-      margin: 0 0 14px;
-      line-height: 1.05;
-      font-family: 'Playfair Display', serif;
-      color: var(--deep);
-    }
-    h1 {
-      font-size: clamp(46px, 6vw, 82px);
-      letter-spacing: -1.8px;
-      max-width: 780px;
-    }
-    h2 { font-size: clamp(30px, 4vw, 46px); }
-    h3 { font-size: 23px; }
-    .lead {
-      font-size: 19px;
-      color: #334155;
-      margin: 10px 0 18px;
-      max-width: 760px;
-      line-height: 1.8;
-    }
-    .address-box {
-      margin: 4px 0 10px;
-      color: #4b5563;
-      font-size: 15px;
-    }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
-    .hero-note {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 24px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .hero-note span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(183,148,90,0.18);
-    }
+h1{font-size:58px}
+h2{font-size:36px}
+h3{font-size:22px}
 
-    .stats-panel {
-      border-radius: 32px;
-      background: linear-gradient(180deg, rgba(17,27,40,0.86), rgba(22,33,49,0.76));
-      border: 1px solid rgba(255,255,255,0.08);
-      overflow: hidden;
-    }
-    .stats-head {
-      padding: 26px 26px 0;
-      color: rgba(255,255,255,0.9);
-    }
-    .stats-head .eyebrow { color: #e7cc9e; margin-bottom: 10px; }
-    .stats-head h3 {
-      font-family: 'Playfair Display', serif;
-      color: white;
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-    .stats-head p {
-      margin: 0;
-      color: rgba(255,255,255,0.72);
-      font-size: 15px;
-    }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      padding: 24px;
-      min-height: calc(100% - 100px);
-      align-content: center;
-    }
-    .stat {
-      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06));
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 24px;
-      padding: 24px;
-      min-height: 155px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
-    }
-    .stat strong {
-      display: block;
-      color: #f1d6a6;
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .stat span {
-      color: rgba(255,255,255,0.82);
-      font-size: 14px;
-      font-weight: 500;
-    }
+/* HEADER */
 
-    .section { padding: 44px 0 28px; }
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-    .section-head p {
-      margin: 0;
-      max-width: 700px;
-      color: var(--muted);
-    }
+header{
+background:white;
+border-bottom:1px solid #e5e7eb;
+position:sticky;
+top:0;
+z-index:100;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(251,247,240,0.86));
-      border: 1px solid rgba(183,148,90,0.16);
-      border-radius: var(--radius);
-      padding: 30px;
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(10px);
-      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 24px 44px rgba(14,21,34,0.12);
-      border-color: rgba(183,148,90,0.28);
-    }
-    .icon {
-      width: 54px;
-      height: 54px;
-      display: grid;
-      place-items: center;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #f8efdf, #efdfc0);
-      color: var(--gold-3);
-      border: 1px solid rgba(183,148,90,0.2);
-      margin-bottom: 18px;
-      font-size: 22px;
-      transition: transform .28s ease, box-shadow .28s ease;
-    }
-    .card:hover .icon {
-      transform: scale(1.07);
-      box-shadow: 0 12px 24px rgba(183,148,90,0.18);
-    }
-    .card p { color: var(--muted); margin: 0; }
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:28px 0;
+}
 
-    .about {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 24px;
-      align-items: stretch;
-    }
-    .panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,246,238,0.86));
-      border-radius: 30px;
-      padding: 34px;
-    }
-    .profile-panel {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 24px;
-      min-height: 100%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(249,244,236,0.82));
-    }
-    .brand-showcase {
-      border-radius: 24px;
-      padding: 34px 30px;
-      background: linear-gradient(160deg, rgba(255,255,255,0.74), rgba(244,235,220,0.9));
-      border: 1px solid rgba(183,148,90,0.16);
-      text-align: center;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
-    }
-    .brand-showcase img {
-      width: 260px;
-      max-width: 85%;
-      margin: 0 auto 20px;
-      image-rendering: -webkit-optimize-contrast;
-      filter: contrast(1.1) saturate(1.06);
-    }
-    .brand-showcase .mini-title {
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 800;
-      color: var(--gold-3);
-      margin-bottom: 10px;
-    }
-    .brand-showcase .big-line {
-      font-family: 'Playfair Display', serif;
-      font-size: 31px;
-      line-height: 1.2;
-      color: var(--deep);
-      margin-bottom: 10px;
-    }
-    .brand-showcase .sub-line {
-      color: var(--muted);
-      max-width: 420px;
-      margin: 0 auto;
-    }
-    .cover-frame {
-      border-radius: 22px;
-      overflow: hidden;
-      border: 1px solid rgba(183,148,90,0.16);
-      box-shadow: var(--shadow-soft);
-    }
-    .cover-frame img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      object-position: center;
-    }
+.brand{
+display:flex;
+align-items:center;
+gap:18px;
+}
 
-    .profile-box {
-      margin: 18px 0 24px;
-      padding: 20px 22px;
-      border-radius: 20px;
-      background: rgba(252,248,241,0.9);
-      border: 1px solid rgba(183,148,90,0.16);
-    }
-    .profile-box .label {
-      font-weight: 800;
-      color: var(--deep);
-      margin-bottom: 8px;
-    }
-    .profile-box .text { color: var(--muted); }
-    .list {
-      list-style: none;
-      padding: 0;
-      margin: 18px 0 0;
-    }
-    .list li {
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(183,148,90,0.12);
-    }
-    .list li:last-child { border-bottom: none; }
+/* BIGGER LOGO */
+.logo img{
+height:140px;
+width:auto;
+display:block;
+}
 
-    .cta {
-      position: relative;
-      overflow: hidden;
-      margin: 28px 0 12px;
-      padding: 38px;
-      background: linear-gradient(135deg, #121b29, #1b2637);
-      color: white;
-      border-radius: 30px;
-      border: 1px solid rgba(255,255,255,0.06);
-      box-shadow: var(--shadow);
-    }
-    .cta::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, rgba(255,255,255,0.06), transparent 40%, rgba(183,148,90,0.12));
-      pointer-events: none;
-    }
-    .cta > * { position: relative; z-index: 1; }
-    .cta p { color: rgba(255,255,255,0.8); max-width: 760px; }
+.brand-text{
+display:flex;
+flex-direction:column;
+}
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 24px;
-    }
-    .contact-card, .form-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,246,238,0.86));
-      border: 1px solid rgba(183,148,90,0.16);
-      border-radius: var(--radius);
-      padding: 30px;
-      box-shadow: var(--shadow-soft);
-      transition: transform .28s ease, box-shadow .28s ease;
-    }
-    .contact-card:hover, .form-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 24px 44px rgba(14,21,34,0.11);
-    }
-    .contact-item {
-      padding: 15px 0;
-      border-bottom: 1px solid rgba(183,148,90,0.12);
-    }
-    .contact-item:last-child { border-bottom: none; }
-    .contact-label {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--gold-3);
-      text-transform: uppercase;
-      letter-spacing: 1.7px;
-      font-size: 12px;
-      font-weight: 800;
-    }
+.brand-text strong{
+font-size:34px;
+font-weight:700;
+letter-spacing:0.5px;
+}
 
-    form { display: grid; gap: 14px; }
-    input, textarea {
-      width: 100%;
-      background: rgba(255,255,255,0.92);
-      border: 1px solid rgba(183,148,90,0.18);
-      border-radius: 16px;
-      padding: 15px 16px;
-      font: inherit;
-      color: var(--text);
-    }
-    textarea { min-height: 140px; resize: vertical; }
+.brand-text small{
+text-transform:uppercase;
+font-size:12px;
+letter-spacing:2px;
+color:var(--gold);
+font-weight:700;
+}
 
-    .map-frame {
-      border-radius: 26px;
-      overflow: hidden;
-      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,246,238,0.86));
-      border: 1px solid rgba(183,148,90,0.16);
-      padding: 18px;
-      box-shadow: var(--shadow-soft);
-    }
-    .map-frame iframe {
-      width: 100%;
-      height: 380px;
-      border: 0;
-      border-radius: 18px;
-    }
+nav ul{
+list-style:none;
+display:flex;
+gap:22px;
+margin:0;
+padding:0;
+align-items:center;
+}
 
-    .language-panel {
-      text-align: center;
-    }
-    .language-panel p {
-      max-width: 760px;
-      margin: 0 auto;
-      color: var(--muted);
-    }
+nav a{
+text-decoration:none;
+color:var(--dark);
+font-weight:600;
+font-size:14px;
+position:relative;
+}
 
-    footer {
-      margin-top: 12px;
-      background: #101826;
-      color: rgba(255,255,255,0.82);
-      padding: 28px 0 48px;
-    }
-    .footer-grid {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      padding-top: 22px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    footer a {
-      color: rgba(255,255,255,0.92);
-      transition: color .25s ease;
-    }
-    footer a:hover { color: #f1d6a6; }
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:100%;
+height:2px;
+background:var(--gold);
+transform:scaleX(0);
+transition:0.3s;
+}
 
-    .floating-whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: #25D366;
-      color: white;
-      font-size: 28px;
-      box-shadow: 0 16px 34px rgba(0,0,0,0.18);
-      z-index: 70;
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-    .floating-whatsapp:hover {
-      transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 20px 38px rgba(0,0,0,0.24);
-    }
+nav a:hover::after{
+transform:scaleX(1);
+}
 
-    @media (max-width: 1100px) {
-      .hero-grid, .about, .contact-grid, .cards {
-        grid-template-columns: 1fr;
-      }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-    }
+.btn{
+padding:12px 18px;
+border-radius:999px;
+font-weight:600;
+text-decoration:none;
+}
 
-    @media (max-width: 920px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav { width: 100%; }
-      .brand-text strong { font-size: 24px; }
-      .hero-card { padding: 34px; }
-      .stats-panel, .panel, .contact-card, .form-card, .card, .cta { border-radius: 24px; }
-    }
+.btn-primary{
+background:var(--gold);
+color:white;
+}
 
-    @media (max-width: 640px) {
-      .container { width: min(var(--max), calc(100% - 24px)); }
-      .topbar-inner { font-size: 12px; }
-      .logo { width: 72px; height: 72px; border-radius: 18px; }
-      .brand-text strong { font-size: 20px; }
-      h1 { font-size: 40px; letter-spacing: -1.2px; }
-      .hero-card, .panel, .contact-card, .form-card, .card, .cta { padding: 22px; }
-      .stats { grid-template-columns: 1fr; padding: 18px; }
-      .hero-note { gap: 10px; }
-      .map-frame iframe { height: 320px; }
-    }
-  </style>
+/* HERO */
+
+.hero{
+background:url('cover.jpg') center/cover no-repeat;
+padding:120px 0;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.35);
+}
+
+.hero-content{
+position:relative;
+color:white;
+max-width:700px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.hero-buttons{
+margin-top:24px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+/* SERVICES */
+
+.section{
+padding:70px 0;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;
+margin-top:30px;
+}
+
+.card{
+background:var(--card);
+padding:26px;
+border-radius:var(--radius);
+box-shadow:0 8px 30px rgba(0,0,0,0.06);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.icon{
+font-size:28px;
+margin-bottom:12px;
+color:var(--gold);
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
+}
+
+.about-logo img{
+max-width:280px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.contact-card{
+background:white;
+padding:26px;
+border-radius:var(--radius);
+box-shadow:0 8px 30px rgba(0,0,0,0.06);
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border:1px solid #d1d5db;
+border-radius:10px;
+font-family:inherit;
+}
+
+textarea{min-height:120px}
+
+/* FOOTER */
+
+footer{
+background:var(--dark);
+color:white;
+padding:40px 0;
+margin-top:60px;
+}
+
+.footer-inner{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:20px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+@media(max-width:900px){
+
+.nav{flex-direction:column;align-items:flex-start}
+
+.logo img{height:100px}
+
+.about-grid,.contact-grid{grid-template-columns:1fr}
+
+h1{font-size:40px}
+
+}
+
+</style>
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div>58 Amine Mneimne Street, Tabet Building, 2nd Floor, Hamra, Beirut, Lebanon | Serving clients in Lebanon and internationally</div>
-      <div><a href="mailto:info@afsaad.com">info@afsaad.com</a> | <a href="tel:+9613905076">+961 3 905 076</a> (Mobile / WhatsApp) | <a href="tel:+9611344033">+961 1 344033</a> (Landline)</div>
-    </div>
-  </div>
 
-  <header>
-    <div class="container nav">
-      <a href="#home" class="brand">
-        <div class="logo"><img src="logo.png" alt="AFSAAD Law Offices Logo"></div>
-        <div class="brand-separator"></div>
-        <div class="brand-text">
-          <strong>AFSAAD Law Offices</strong>
-          <small>Trusted since 1929</small>
-        </div>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="https://maps.google.com/?q=VFVP%2BG6%20Beirut" target="_blank" rel="noopener noreferrer">Map</a></li>
-          <li><a class="btn btn-primary" href="#contact">Book a Consultation</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+<div class="container nav">
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-card glass">
-          <div class="eyebrow">Beirut Legal Practice</div>
-          <h1>Modern legal counsel with a legacy of trust.</h1>
-          <p class="lead">AFSAAD Law Offices is a law firm based in Hamra, Beirut, Lebanon, advising clients on Lebanese and international law, commercial matters, real estate, contracts, dispute resolution, and cross-border legal issues.</p>
-          <div class="address-box"><strong>Office Address:</strong><br>
-            58 Amine Mneimne Street<br>
-            Tabet Building, 2nd Floor<br>
-            Hamra, Beirut, Lebanon<br>
-            P.O. Box 113-6011
-          </div>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Contact the Office</a>
-            <a href="#services" class="btn btn-secondary">View Practice Areas</a>
-            <a href="https://wa.me/9613905076" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">WhatsApp</a>
-          </div>
-          <div class="hero-note">
-            <span>✦ Corporate & Commercial</span>
-            <span>✦ Real Estate & Contracts</span>
-            <span>✦ Litigation & ADR</span>
-          </div>
-        </div>
+<div class="brand">
+<div class="logo">
+<img src="logo.png" alt="AFSAAD Law Offices Logo">
+</div>
 
-        <div class="stats-panel glass">
-          <div class="stats-head">
-            <div class="eyebrow">Core Services</div>
-            <h3>Practical legal solutions.</h3>
-            <p>Focused legal guidance for businesses, investors, families, and international clients.</p>
-          </div>
-          <div class="stats">
-            <div class="stat">
-              <strong>Corporate</strong>
-              <span>Corporate law, company law, company formation, and corporate structuring.</span>
-            </div>
-            <div class="stat">
-              <strong>Real Estate</strong>
-              <span>Real estate law, property management, and equity-related legal matters.</span>
-            </div>
-            <div class="stat">
-              <strong>Contracts</strong>
-              <span>Drafting, negotiation, legal review, and risk-focused contract advice.</span>
-            </div>
-            <div class="stat">
-              <strong>Disputes</strong>
-              <span>Litigation, ADR, collection matters, and strategic dispute resolution.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="brand-text">
+<strong>AFSAAD Law Offices</strong>
+<small>Trusted Since 1929</small>
+</div>
+</div>
 
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Practice Areas</div>
-            <h2>Legal services tailored to your needs</h2>
-          </div>
-          <p>The structure is ready and polished. You can continue tailoring the wording of each service to reflect your exact practice and preferred tone.</p>
-        </div>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a class="btn btn-primary" href="#contact">Consultation</a></li>
+</ul>
+</nav>
 
-        <div class="cards">
-          <article class="card">
-            <div class="icon">🏢</div>
-            <h3>Company Formation</h3>
-            <p>Legal assistance for establishing companies in Lebanon, including corporate structuring and registration formalities.</p>
-          </article>
-          <article class="card">
-            <div class="icon">⚖️</div>
-            <h3>Corporate and Commercial Law</h3>
-            <p>Company formation, company law, corporate structuring, governance matters, and commercial legal support.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🏛️</div>
-            <h3>Real Estate and Property</h3>
-            <p>Real estate law, property management, title issues, co-ownership matters, and property-related legal advice.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🖋️</div>
-            <h3>Contract Drafting and Review</h3>
-            <p>Clear, protective, and business-oriented drafting for commercial, civil, and cross-border transactions.</p>
-          </article>
-          <article class="card">
-            <div class="icon">📚</div>
-            <h3>Inheritance and Estate Matters</h3>
-            <p>Succession planning, estate administration, and representation in inheritance-related disputes.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🤝</div>
-            <h3>Negotiation and Advisory</h3>
-            <p>Strategic legal negotiation and practical solutions for businesses, investors, and international clients.</p>
-          </article>
-          <article class="card">
-            <div class="icon">📌</div>
-            <h3>Dispute Resolution</h3>
-            <p>Litigation, ADR, legal opinions, criminal law support, and structured dispute resolution strategy.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+</div>
+</header>
 
-    <section class="section" id="about">
-      <div class="container about">
-        <div class="panel profile-panel glass">
-          <div class="brand-showcase">
-            <img src="logo.png" alt="AFSAAD Law Offices Logo">
-            <div class="mini-title">AFSAAD Law Offices</div>
-            <div class="big-line">Trusted legal counsel since 1929</div>
-            <div class="sub-line">Lebanese and international legal services with a legacy of professionalism, integrity, and practical legal solutions.</div>
-          </div>
-          <div class="cover-frame">
-            <img src="cover.jpg" alt="AFSAAD Law Offices Cover">
-          </div>
-        </div>
+<section class="hero">
+<div class="container hero-content">
+<h1>Modern legal counsel with a legacy of trust</h1>
+<p>AFSAAD Law Offices in  Beirut provides Lebanese and international legal services including corporate law, real estate law, contracts, dispute resolution and legal advisory.</p>
 
-        <div class="panel glass">
-          <div class="eyebrow">About the Office</div>
-          <h2>AFSAAD Law Offices</h2>
-          <p>AFSAAD Law Offices is an established law firm serving clients in Lebanon and internationally, with a legacy dating back to 1929.</p>
-          <p>The office is presented publicly as carrying a family legal legacy through Abdul Aziz Saad (Sr.), Dr. Farouk Saad, and Abdul Aziz Saad (Jr.). It focuses on Lebanese and international legal services with an emphasis on precision, integrity, and practical solutions.</p>
+<div class="hero-buttons">
+<a class="btn btn-primary" href="#contact">Contact the Office</a>
+<a class="btn" style="background:white;color:black" href="#services">Practice Areas</a>
+</div>
+</div>
+</section>
 
-          <div class="profile-box">
-            <div class="label">Attorney Profile</div>
-            <div class="text">Abdul Aziz Saad is a Beirut-based attorney and legal consultant advising clients on Lebanese law, corporate matters, contracts, real estate issues, dispute resolution, and cross-border legal matters in the MENA region.</div>
-          </div>
+<section class="section" id="services">
+<div class="container">
+<h2>Practice Areas</h2>
 
-          <ul class="list">
-            <li><strong>Legacy:</strong> Trusted since 1929</li>
-            <li><strong>Office Name:</strong> AFSAAD Law Offices</li>
-            <li><strong>Location:</strong><br>58 Amine Mneimne Street<br>Tabet Building, 2nd Floor<br>Hamra, Beirut, Lebanon<br>P.O. Box 113-6011</li>
-            <li><strong>Core Fields:</strong> Lebanese law, international law, civil law, corporate law, real estate law, litigation, ADR</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<div class="cards">
 
-    <section class="section">
-      <div class="container">
-        <div class="cta">
-          <div class="eyebrow" style="color:#e7cc9e;">Professional Representation</div>
-          <h2 style="color:white;">A refined digital presence for a modern law office.</h2>
-          <p>This website now presents your law office with a refined modern style. You can continue improving it by adding case highlights, professional portraits, or a bilingual Arabic-English version.</p>
-          <a href="#contact" class="btn btn-primary">Contact AFSAAD Law Offices</a>
-        </div>
-      </div>
-    </section>
+<div class="card">
+<div class="icon">⚖️</div>
+<h3>Corporate Law</h3>
+<p>Company formation, corporate structuring and legal advisory for businesses in Lebanon.</p>
+</div>
 
-    <section class="section" id="contact">
-      <div class="container contact-grid" style="margin-bottom:22px;">
-        <div class="contact-card glass">
-          <div class="eyebrow">Contact</div>
-          <h2>Get in touch</h2>
+<div class="card">
+<div class="icon">🏢</div>
+<h3>Real Estate</h3>
+<p>Property law, real estate transactions and legal support for investors and owners.</p>
+</div>
 
-          <div class="contact-item">
-            <span class="contact-label">Address</span>
-            58 Amine Mneimne Street<br>
-            Tabet Building, 2nd Floor<br>
-            Hamra, Beirut, Lebanon<br>
-            P.O. Box 113-6011
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Email</span>
-            <a href="mailto:info@afsaad.com">info@afsaad.com</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Phone</span>
-            <a href="tel:+9613905076">+961 3 905 076</a> (Mobile / WhatsApp)<br>
-            <a href="tel:+9611344033">+961 1 344033</a> (Landline)
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Map Location</span>
-            <a href="https://maps.google.com/?q=VFVP%2BG6%20Beirut" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Working Hours</span>
-            By appointment
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Social Media</span>
-            <a href="https://www.facebook.com/AfsaadLawOffices/" target="_blank" rel="noopener noreferrer">Facebook</a><br>
-            <a href="https://www.linkedin.com/company/afsaad-law-offices" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </div>
-        </div>
+<div class="card">
+<div class="icon">📑</div>
+<h3>Contracts</h3>
+<p>Professional drafting, negotiation and review of commercial and civil contracts.</p>
+</div>
 
-        <div class="form-card glass">
-          <div class="eyebrow">Consultation Request</div>
-          <h3>Simple contact form</h3>
-          <p style="color:var(--muted); margin-top:0;">This form is for design only. Clients may also contact the office directly by email, phone, WhatsApp, or Google Maps.</p>
-          <p><a class="btn btn-secondary" href="https://wa.me/9613905076" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
-          <form>
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email Address">
-            <input type="text" placeholder="Phone Number">
-            <textarea placeholder="Briefly describe your legal matter"></textarea>
-            <button type="button" class="btn btn-primary" style="border:none; cursor:pointer;">Send Request</button>
-          </form>
-        </div>
-      </div>
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Negotiation</h3>
+<p>Strategic negotiation and legal solutions for commercial and private matters.</p>
+</div>
 
-      <div class="container">
-        <div class="map-frame glass">
-          <div class="eyebrow">Office Map</div>
-          <iframe src="https://maps.google.com/maps?q=VFVP%2BG6%20Beirut&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
+<div class="card">
+<div class="icon">📚</div>
+<h3>Inheritance</h3>
+<p>Succession planning and inheritance dispute representation.</p>
+</div>
 
-  <section class="section" style="padding-top:10px;">
-    <div class="container">
-      <div class="panel language-panel glass">
-        <div class="eyebrow">Bilingual Support</div>
-        <h2>Arabic, English, and French</h2>
-        <p>AFSAAD Law Offices serves local and international clients and can communicate in Arabic, English, and French according to client needs.</p>
-      </div>
-    </div>
-  </section>
+<div class="card">
+<div class="icon">🏛️</div>
+<h3>Litigation</h3>
+<p>Representation before Lebanese courts and dispute resolution.</p>
+</div>
 
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <strong style="font-family:'Playfair Display',serif; font-size:24px; color:white;">AFSAAD Law Offices</strong><br>
-        Trusted since 1929
-      </div>
-      <div>
-        © 2026 AFSAAD Law Offices. All rights reserved. |
-        <a href="https://www.facebook.com/AfsaadLawOffices/" target="_blank" rel="noopener noreferrer">Facebook</a> |
-        <a href="https://www.linkedin.com/company/afsaad-law-offices" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
+</div>
+</div>
+</section>
 
-  <a class="floating-whatsapp" href="https://wa.me/9613905076" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">✆</a>
+<section class="section" id="about">
+<div class="container about-grid">
+
+<div class="about-logo">
+<img src="logo.png" alt="AFSAAD Law Offices">
+</div>
+
+<div>
+<h2>About the Office</h2>
+<p>AFSAAD Law Offices is a Beirut based law firm with a legacy dating back to 1929. The firm provides legal services in Lebanon and internationally with a focus on professionalism, integrity and practical legal solutions.</p>
+
+<p>Attorney Abdul Aziz Saad advises clients on Lebanese law, corporate matters, contracts, real estate issues and dispute resolution.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container contact-grid">
+
+<div class="contact-card">
+<h2>Contact</h2>
+
+<p><strong>Address</strong><br>
+58 Amine Mneimne St<br>
+Tabet Building 2nd Floor<br>
+Hamra Beirut Lebanon</p>
+
+<p><strong>Phone</strong><br>
++961 3 905 076<br>
++961 1 344033</p>
+
+<p><strong>Email</strong><br>
+info@afsaad.com</p>
+
+</div>
+
+<div class="contact-card">
+<h2>Send a message</h2>
+
+<form>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<input type="text" placeholder="Phone">
+<textarea placeholder="Describe your legal matter"></textarea>
+<button class="btn btn-primary" type="button">Send</button>
+</form>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="container footer-inner">
+<div>
+<strong style="font-size:20px">AFSAAD Law Offices</strong><br>
+Trusted since 1929
+</div>
+
+<div>
+© 2026 AFSAAD Law Offices
+</div>
+</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/9613905076">✆</a>
+
 </body>
 </html>

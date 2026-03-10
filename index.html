@@ -84,8 +84,16 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
       min-width: 0;
+    }
+
+    .brand-separator {
+      width: 1px;
+      height: 46px;
+      background: linear-gradient(180deg, transparent, var(--gold), transparent);
+      opacity: 0.6;
+    }
     }
     .logo {
       width: auto;
@@ -120,9 +128,9 @@
     }
     .brand-text strong {
       font-family: 'Playfair Display', serif;
-      font-size: 30px;
+      font-size: 34px;
       line-height: 1.05;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.6px;
       color: #0d1522;
       font-weight: 700;
     }
@@ -669,6 +677,7 @@
     <div class="container nav">
       <a href="#home" class="brand">
         <div class="logo"><img src="logo.png" alt="AFSAAD Law Offices Logo"></div>
+        <div class="brand-separator"></div>
         <div class="brand-text">
           <strong>AFSAAD Law Offices</strong>
           <small>Trusted since 1929</small>

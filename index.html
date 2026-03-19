@@ -87,11 +87,13 @@ header{
   border-bottom:1px solid rgba(183,148,90,.12);
 }
 .nav{
-  margin-left:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:10px 0;
 }
 .brand{
-  min-width:max-content;
-  flex-wrap:nowrap;
   display:flex;
   align-items:center;
   gap:20px;
@@ -111,15 +113,14 @@ header{
   width:auto;
   object-fit:contain;
 }
-.brand-copy{display:flex;flex-direction:column;gap:0;flex:0 0 auto;min-width:max-content}
+.brand-copy{display:flex;flex-direction:column;gap:0}
 .brand-copy strong{
   font-family:'Cormorant Garamond',serif;
-  font-size:32px;
+  font-size:34px;
   line-height:1;
   font-weight:700;
   color:var(--deep);
   letter-spacing:.4px;
-  white-space:nowrap;
 }
 .brand-copy small{
   display:block;
@@ -551,7 +552,6 @@ footer strong{
   .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
 }
 @media (max-width:900px){
-  .brand-copy strong{font-size:28px}
   .nav{flex-direction:column;align-items:flex-start;gap:10px}
   nav ul{gap:16px}
   .logo img{height:96px}
@@ -561,8 +561,6 @@ footer strong{
   h1{font-size:46px}
 }
 @media (max-width:680px){
-  .brand-copy strong{font-size:22px}
-  .brand{gap:10px}
   .container{width:min(var(--max),calc(100% - 20px))}
   .section{padding:56px 0}
   .topbar-inner{font-size:12px}
@@ -629,8 +627,8 @@ footer strong{
         <span class="eyebrow">Beirut Legal Practice</span>
         <h1 style="letter-spacing:.8px;">Trusted Legal Counsel</h1>
         <p style="font-size:24px;font-family:'Cormorant Garamond',serif;color:var(--gold-dark);margin-top:8px;">Beirut · Lebanon</p>
-        <p class="lead">AFSAAD LAW OFFICES in  Beirut provides Lebanese and international legal services in corporate law, real estate, contracts, dispute resolution, inheritance matters, and legal advisory.</p>
-        <div class="address-pill"> Beirut · Serving Lebanon and international clients</div>
+        <p class="lead">AFSAAD LAW OFFICES in Hamra, Beirut provides Lebanese and international legal services in corporate law, real estate, contracts, dispute resolution, inheritance matters, and legal advisory.</p>
+        <div class="address-pill">Hamra, Beirut · Serving Lebanon and international clients</div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Contact the Office</a>
           <a class="btn btn-secondary" href="#services">Practice Areas</a>

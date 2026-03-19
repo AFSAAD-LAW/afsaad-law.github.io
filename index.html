@@ -575,7 +575,7 @@ footer strong{
         <h1 style="letter-spacing:1px;">AFSAAD LAW OFFICES</h1>
         <p style="font-size:20px;font-family:'Cormorant Garamond',serif;color:var(--gold-dark);margin-top:6px;">Beirut · Lebanon</p>
         <p class="lead">AFSAAD Law Offices in  Beirut provides Lebanese and international legal services in corporate law, real estate, contracts, dispute resolution, inheritance matters, and legal advisory.</p>
-        <div class="address-pill">, Beirut · Serving Lebanon and international clients</div>
+        <div class="address-pill"> Beirut · Serving Lebanon and international clients</div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Contact the Office</a>
           <a class="btn btn-secondary" href="#services">Practice Areas</a>
@@ -668,13 +668,13 @@ footer strong{
     <div class="form-card">
       <span class="eyebrow">Message</span>
       <h2>Request a consultation</h2>
-      <p style="color:var(--muted);margin-bottom:16px;">Complete the form below and your email application will open with a pre-filled consultation request addressed to AFSAAD LAW OFFICES.</p>
-      <form id="contactForm">
-        <input type="text" id="contactName" placeholder="Name" required>
-        <input type="email" id="contactEmail" placeholder="Email" required>
-        <input type="text" id="contactPhone" placeholder="Phone">
-        <textarea id="contactMessage" placeholder="Describe your legal matter" required></textarea>
-        <button class="btn btn-primary" type="submit" style="border:none;cursor:pointer">Send message</button>
+      <p style="color:var(--muted);margin-bottom:16px;">Complete the form below and click <strong>Send via WhatsApp</strong>. A consultation message will open directly in WhatsApp to your office number.</p>
+      <form id="whatsappForm">
+        <input type="text" id="waName" name="name" placeholder="Name" required>
+        <input type="email" id="waEmail" name="email" placeholder="Email" required>
+        <input type="text" id="waPhone" name="phone" placeholder="Phone">
+        <textarea id="waMessage" name="message" placeholder="Describe your legal matter" required></textarea>
+        <button class="btn btn-primary" type="submit" style="border:none;cursor:pointer">Send via WhatsApp</button>
       </form>
     </div>
   </div>
@@ -699,18 +699,21 @@ footer strong{
 
 <a class="whatsapp" href="https://wa.me/9613905076" aria-label="WhatsApp">✆</a>
 
-<script>
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.getElementById('contactName').value.trim();
-    const email = document.getElementById('contactEmail').value.trim();
-    const phone = document.getElementById('contactPhone').value.trim();
-    const message = document.getElementById('contactMessage').value.trim();
 
-    const subject = encodeURIComponent('Consultation Request - AFSAAD LAW OFFICES');
-    const body = encodeURIComponent(
+<script>
+const whatsappForm = document.getElementById('whatsappForm');
+if (whatsappForm) {
+  whatsappForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('waName').value.trim();
+    const email = document.getElementById('waEmail').value.trim();
+    const phone = document.getElementById('waPhone').value.trim();
+    const message = document.getElementById('waMessage').value.trim();
+
+    const text = encodeURIComponent(
+      'Consultation Request - AFSAAD LAW OFFICES
+
+' +
       'Name: ' + name + '
 ' +
       'Email: ' + email + '
@@ -722,7 +725,7 @@ if (contactForm) {
 ' + message
     );
 
-    window.location.href = 'mailto:info@afsaad.com?subject=' + subject + '&body=' + body;
+    window.open('https://wa.me/9613905076?text=' + text, '_blank');
   });
 }
 </script>

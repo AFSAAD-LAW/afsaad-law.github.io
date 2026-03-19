@@ -134,7 +134,25 @@ header{
   margin-top:16px;
 }
 nav{
-  margin-left:40px; /* add clear space between brand and menu */
+  margin-left:60px; /* more elegant spacing */
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:28px; /* more breathing space between menu items */
+  padding:0;
+  margin:0;
+  flex-wrap:wrap;
+}
+
+nav a{
+  position:relative;
+  font-size:14px;
+  font-weight:500; /* lighter = more luxury */
+  letter-spacing:.3px;
+  color:var(--deep);
 }
 nav ul{
   list-style:none;
@@ -544,7 +562,7 @@ footer strong{
 
 <div class="topbar">
   <div class="container topbar-inner">
-    <div>58 Amine Mneimne St, Tabet Building, 2nd Floor, Hamra, Beirut, Lebanon</div>
+    <div>58 Amine Mneimne St, Tabet Building, 2nd Floor, Hamra, Beirut, Lebanon<br>P.O. Box: 113-6011 Hamra, Beirut</div>
     <div><a href="mailto:info@afsaad.com">info@afsaad.com</a> | <a href="tel:+9613905076">+961 3 905 076</a> | <a href="tel:+9611344033">+961 1 344033</a></div>
   </div>
 </div>

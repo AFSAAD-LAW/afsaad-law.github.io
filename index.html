@@ -87,13 +87,7 @@ header{
   border-bottom:1px solid rgba(183,148,90,.12);
 }
 .nav{
-  flex-shrink:0; /* prevent menu from pushing title */
-}
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:40px; /* increased space between logo/title and menu */
-  padding:10px 0;
+  margin-left:auto;
 }
 .brand{
   min-width:max-content;
@@ -140,10 +134,10 @@ nav ul{
   list-style:none;
   display:flex;
   align-items:center;
-  gap:28px; /* more spacing between menu items */
+  gap:22px;
   padding:0;
   margin:0;
-  flex-wrap:nowrap; /* prevent wrapping */
+  flex-wrap:wrap;
 }
 nav a{
   position:relative;

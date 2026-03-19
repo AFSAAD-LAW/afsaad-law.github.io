@@ -14,7 +14,6 @@
   --bg:#f5f1ea;
   --bg-2:#efe7dc;
   --surface:rgba(255,255,255,.82);
-  --surface-strong:rgba(255,255,255,.94);
   --text:#18202c;
   --muted:#667085;
   --line:rgba(183,148,90,.18);
@@ -24,7 +23,6 @@
   --shadow:0 20px 50px rgba(16,24,40,.10);
   --shadow-soft:0 10px 30px rgba(16,24,40,.06);
   --radius:24px;
-  --radius-sm:18px;
   --max:1240px;
 }
 *{box-sizing:border-box}
@@ -57,6 +55,7 @@ h1,h2,h3{
   color:var(--deep);
   font-family:'Cormorant Garamond',serif;
   line-height:1.02;
+  text-wrap:balance;
 }
 h1{font-size:clamp(54px,7vw,98px);letter-spacing:-1.6px}
 h2{font-size:clamp(38px,5vw,58px);letter-spacing:-.4px}
@@ -109,11 +108,13 @@ header{
   height:110px;
   width:auto;
   object-fit:contain;
+  display:block;
 }
-  width:auto;
-  object-fit:contain;
+.brand-copy{
+  display:flex;
+  flex-direction:column;
+  gap:0;
 }
-.brand-copy{display:flex;flex-direction:column;gap:0}
 .brand-copy strong{
   font-family:'Cormorant Garamond',serif;
   font-size:34px;
@@ -121,6 +122,7 @@ header{
   font-weight:700;
   color:var(--deep);
   letter-spacing:.4px;
+  white-space:nowrap;
 }
 .brand-copy small{
   display:block;
@@ -181,14 +183,6 @@ nav a:hover::after{transform:scaleX(1)}
   box-shadow:var(--shadow-soft);
 }
 .btn-secondary:hover{transform:translateY(-2px);background:#fff}
-
-.brand-copy strong,
-.title,
-h1,
-h2,
-h3{
-  text-wrap:balance;
-}
 
 .hero{
   position:relative;
@@ -456,25 +450,6 @@ textarea{min-height:130px;resize:vertical}
   border-radius:18px;
 }
 
-.cta{
-  position:relative;
-  overflow:hidden;
-  border-radius:30px;
-  padding:38px;
-  background:linear-gradient(135deg,#121b29,#1a2637);
-  color:#fff;
-  box-shadow:var(--shadow);
-}
-.cta::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(120deg, rgba(255,255,255,.06), transparent 40%, rgba(183,148,90,.12));
-}
-.cta>*{position:relative;z-index:1}
-.cta h2{color:#fff}
-.cta p{color:rgba(255,255,255,.82);max-width:760px}
-
 footer{
   margin-top:24px;
   background:var(--deep);
@@ -512,25 +487,8 @@ footer strong{
   transform:scaleX(0);
   transition:.25s ease;
 }
-.footer-inner a:hover{
-  color:#f1d7a8;
-}
-.footer-inner a:hover::after{
-  transform:scaleX(1);
-}
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-  border-top:1px solid rgba(255,255,255,.10);
-  padding-top:20px;
-}
-footer strong{
-  font-family:'Cormorant Garamond',serif;
-  font-size:28px;
-  color:#fff;
-}
+.footer-inner a:hover{color:#f1d7a8}
+.footer-inner a:hover::after{transform:scaleX(1)}
 
 .whatsapp{
   position:fixed;
@@ -568,7 +526,7 @@ footer strong{
   .logo img{height:78px}
   .brand-copy strong{font-size:24px}
   .brand-copy small{letter-spacing:2px;font-size:10px}
-  .hero-card,.stats-card,.panel,.card,.contact-card,.form-card,.map-card,.cta{padding:22px}
+  .hero-card,.stats-card,.panel,.card,.contact-card,.form-card,.map-card{padding:22px}
   .cards{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:1fr}
   h1{font-size:38px}
@@ -627,8 +585,8 @@ footer strong{
         <span class="eyebrow">Beirut Legal Practice</span>
         <h1 style="letter-spacing:.8px;">Trusted Legal Counsel</h1>
         <p style="font-size:24px;font-family:'Cormorant Garamond',serif;color:var(--gold-dark);margin-top:8px;">Beirut · Lebanon</p>
-        <p class="lead">AFSAAD LAW OFFICES in Hamra, Beirut provides Lebanese and international legal services in corporate law, real estate, contracts, dispute resolution, inheritance matters, and legal advisory.</p>
-        <div class="address-pill">Hamra, Beirut · Serving Lebanon and international clients</div>
+        <p class="lead">AFSAAD LAW OFFICES in  Beirut provides Lebanese and international legal services in corporate law, real estate, contracts, dispute resolution, inheritance matters, and legal advisory.</p>
+        <div class="address-pill"> Beirut · Serving Lebanon and international clients</div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Contact the Office</a>
           <a class="btn btn-secondary" href="#services">Practice Areas</a>
@@ -709,8 +667,6 @@ footer strong{
   </div>
 </section>
 
-
-
 <section class="section" id="contact">
   <div class="container contact-grid">
     <div class="contact-card">
@@ -769,7 +725,6 @@ footer strong{
 </footer>
 
 <a class="whatsapp" href="https://wa.me/9613905076" aria-label="WhatsApp">✆</a>
-
 
 <script>
 const whatsappForm = document.getElementById('whatsappForm');

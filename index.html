@@ -81,17 +81,55 @@ header{
   position:sticky;
   top:0;
   z-index:50;
-  background:rgba(247,243,236,.72);
+  background:rgba(247,243,236,.78);
   backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(183,148,90,.12);
 }
 .nav{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-items:center;
+  column-gap:28px;
+  padding:12px 0;
+}
+
+.nav-top{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:24px;
-  padding:10px 0;
+  width:100%;
+  gap:14px;
 }
+
+.menu-toggle{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid rgba(183,148,90,.18);
+  background:rgba(255,255,255,.78);
+  color:var(--deep);
+  box-shadow:var(--shadow-soft);
+  cursor:pointer;
+  padding:0;
+}
+
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after{
+  content:"";
+  display:block;
+  width:18px;
+  height:2px;
+  background:currentColor;
+  border-radius:2px;
+  transition:.25s ease;
+  position:relative;
+}
+.menu-toggle span::before{position:absolute;top:-6px;left:0}
+.menu-toggle span::after{position:absolute;top:6px;left:0}
 .brand{
   display:flex;
   align-items:center;
@@ -134,14 +172,15 @@ header{
   margin-top:16px;
 }
 nav{
-  margin-left:60px; /* more elegant spacing */
+  margin-left:auto;
 }
 
 nav ul{
   list-style:none;
   display:flex;
   align-items:center;
-  gap:28px; /* more breathing space between menu items */
+  justify-content:flex-end;
+  gap:24px;
   padding:0;
   margin:0;
   flex-wrap:wrap;
@@ -531,16 +570,67 @@ footer strong{
   .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
 }
 @media (max-width:900px){
-  .nav{flex-direction:column;align-items:flex-start;gap:10px}
-  nav ul{gap:16px}
-  .logo img{height:96px}
+  .nav{
+    grid-template-columns:1fr;
+    row-gap:12px;
+  }
+  .nav-top{
+    width:100%;
+  }
+  .menu-toggle{
+    display:inline-flex;
+    flex:0 0 auto;
+  }
+  nav{
+    margin-left:0;
+    width:100%;
+    display:none;
+  }
+  nav.is-open{
+    display:block;
+  }
+  nav ul{
+    width:100%;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    gap:8px;
+    padding:12px 0 4px;
+  }
+  nav ul li{
+    width:100%;
+  }
+  nav a{
+    display:block;
+    width:100%;
+    padding:10px 0;
+  }
+  .logo img{height:92px}
   .brand-copy strong{font-size:30px}
+  .brand-copy small{margin-top:10px}
   .hero{min-height:auto}
   .hero-inner{padding:70px 0 54px}
   h1{font-size:46px}
 }
 @media (max-width:680px){
   .container{width:min(var(--max),calc(100% - 20px))}
+  .section{padding:56px 0}
+  .topbar-inner{font-size:12px}
+  .brand{gap:10px}
+  .logo img{height:72px}
+  .brand-copy strong{font-size:22px}
+  .brand-copy small{letter-spacing:2px;font-size:10px;margin-top:8px}
+  .hero-card,.stats-card,.panel,.card,.contact-card,.form-card,.map-card{padding:20px}
+  .cards{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr}
+  h1{font-size:34px}
+  h2{font-size:30px}
+  .hero-card .lead{font-size:16px}
+  .map-card iframe{height:260px}
+  .btn{
+    width:100%;
+  }
+}
   .section{padding:56px 0}
   .topbar-inner{font-size:12px}
   .brand{gap:12px}
@@ -569,15 +659,18 @@ footer strong{
 
 <header>
   <div class="container nav">
-    <div class="brand">
+    <div class="nav-top">
+      <div class="brand">
       <div class="logo"><img src="logo.png" alt="AFSAAD LAW OFFICES logo"></div>
       <div class="brand-copy">
         <strong>AFSAAD LAW OFFICES</strong>
         <small>Trusted Since 1929</small>
       </div>
     </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span></button>
+    </div>
 
-    <nav>
+    <nav id="siteNav">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="corporate-law-beirut.html">Corporate</a></li>
@@ -748,6 +841,15 @@ footer strong{
 <a class="whatsapp" href="https://wa.me/9613905076" aria-label="WhatsApp">✆</a>
 
 <script>
+const menuToggle = document.getElementById('menuToggle');
+const siteNav = document.getElementById('siteNav');
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener('click', function () {
+    const open = siteNav.classList.toggle('is-open');
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+}
+
 const whatsappForm = document.getElementById('whatsappForm');
 if (whatsappForm) {
   whatsappForm.addEventListener('submit', function (e) {

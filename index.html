@@ -572,7 +572,7 @@ footer strong{
     border-top:1px solid rgba(183,148,90,.12);
   }
   nav.is-open{
-    display:block;
+    display:block !important;
   }
   nav ul{
     width:100%;
@@ -653,7 +653,7 @@ footer strong{
           <small>Trusted Since 1929</small>
         </div>
       </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav" onclick="(function(btn){var nav=document.getElementById('siteNav'); if(nav){var open=nav.classList.toggle('is-open'); btn.setAttribute('aria-expanded', open ? 'true' : 'false');}})(this)"><span></span></button>
     </div>
 
     <nav id="siteNav">

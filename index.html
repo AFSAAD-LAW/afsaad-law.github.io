@@ -828,42 +828,43 @@ footer strong{
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-const menuToggle = document.getElementById('menuToggle');
-const siteNav = document.getElementById('siteNav');
-if (menuToggle && siteNav) {
-  menuToggle.addEventListener('click', function () {
-    const open = siteNav.classList.toggle('is-open');
-    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-}
+  const menuToggle = document.getElementById('menuToggle');
+  const siteNav = document.getElementById('siteNav');
+  const whatsappForm = document.getElementById('whatsappForm');
 
-const whatsappForm = document.getElementById('whatsappForm');
-if (whatsappForm) {
-  whatsappForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.getElementById('waName').value.trim();
-    const email = document.getElementById('waEmail').value.trim();
-    const phone = document.getElementById('waPhone').value.trim();
-    const message = document.getElementById('waMessage').value.trim();
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', function () {
+      const isOpen = siteNav.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
 
-    const text = encodeURIComponent(
-      'Consultation Request - AFSAAD LAW OFFICES
+  if (whatsappForm) {
+    whatsappForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('waName').value.trim();
+      const email = document.getElementById('waEmail').value.trim();
+      const phone = document.getElementById('waPhone').value.trim();
+      const message = document.getElementById('waMessage').value.trim();
 
-' +
-      'Name: ' + name + '
-' +
-      'Email: ' + email + '
-' +
-      'Phone: ' + phone + '
+      const text = encodeURIComponent(
+        'Consultation Request - AFSAAD LAW OFFICES
 
 ' +
-      'Legal Matter:
+        'Name: ' + name + '
+' +
+        'Email: ' + email + '
+' +
+        'Phone: ' + phone + '
+
+' +
+        'Legal Matter:
 ' + message
-    );
+      );
 
-    window.open('https://wa.me/9613905076?text=' + text, '_blank');
-  });
-}
+      window.open('https://wa.me/9613905076?text=' + text, '_blank');
+    });
+  }
 });
 </script>
 </body>
